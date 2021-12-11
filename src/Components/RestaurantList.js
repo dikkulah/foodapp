@@ -5,6 +5,9 @@ import RestaurantDetail from "./RestaurantDetail";
 import { withNavigation } from "react-navigation";
 
 const RestaurantList = ({ title, restaurants, navigation }) => {
+  if(!restaurants.length){
+    return null;
+  }
   return (
     <View style={styles.container}>
       <Text style={styles.titleStyle}>{title}</Text>
