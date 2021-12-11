@@ -4,7 +4,7 @@ import yelp from "../api/yelp";
 export default () => {
   const [restaurants, setRestaurants] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
-  
+
   const searchApi = async (searhTerm) => {
     try {
       const response = await yelp.get("/search", {
@@ -19,7 +19,7 @@ export default () => {
       setErrorMessage("Something went wrong");
     }
   };
-  // tek sefer çağrıda bulunmak iin
+  // tek sefer çağrıda bulunmak için , başlangıç araması
   useEffect(() => {
     searchApi("pasta");
   }, []);
