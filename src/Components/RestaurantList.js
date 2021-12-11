@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 import RestaurantDetail from "./RestaurantDetail";
-import RestaurantScreen from "../screens/RestaurantScreen";
+import { withNavigation } from "react-navigation";
 
 const RestaurantList = ({ title, restaurants, navigation }) => {
   return (
@@ -16,7 +16,7 @@ const RestaurantList = ({ title, restaurants, navigation }) => {
         renderItem={({ item }) => {
           return (
             <TouchableOpacity
-              onPress={() => navigation.navigate("Restaurant")}
+              onPress={() => navigation.navigate("Restaurant",{id:item.id})}
             >
               <RestaurantDetail restaurant={item} />
             </TouchableOpacity>
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
 });
-export default RestaurantList;
+export default withNavigation(RestaurantList);
