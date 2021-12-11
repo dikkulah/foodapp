@@ -21,7 +21,7 @@ export default () => {
   };
   // tek sefer çağrıda bulunmak için , başlangıç araması
   useEffect(() => {
-    searchApi("pasta");
+    searchApi("meat");
   }, []);
   //searchApi('pasta');
 

@@ -29,6 +29,8 @@ const styles = StyleSheet.create({
     borderRadius: 10, // köşe yumuşatma
     margin: 10, // kenarlardan boşluk
     flexDirection: "row", //satır haline getirme
+    marginBottom:10,
+    
   },
   inputStyle: {
     flex: 1, // yayma
