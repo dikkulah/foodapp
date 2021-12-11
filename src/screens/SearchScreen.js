@@ -18,12 +18,12 @@ const SearchScreen = () => {
   return (
     <>
       {errorMessage ? <Text>{errorMessage} </Text> : null}
-      
-        <SearchBar
-          term={term}
-          onTermChange={setTerm}
-          onTermSubmit={() => searchApi(term)}
-        />
+
+      <SearchBar
+        term={term}
+        onTermChange={setTerm}
+        onTermSubmit={() => searchApi(term)}
+      />
       <ScrollView>
         <Text>We have found {restaurants.length} </Text>
         <RestaurantList
@@ -37,15 +37,12 @@ const SearchScreen = () => {
         <RestaurantList
           title="Big Spender"
           restaurants={filterRestaurantsByPrice("$$$")}
-          
         />
       </ScrollView>
     </>
   );
 };
 
-const styles = StyleSheet.create({
-  
-});
+const styles = StyleSheet.create({});
 
 export default SearchScreen;

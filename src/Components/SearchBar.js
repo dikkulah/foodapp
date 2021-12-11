@@ -4,7 +4,7 @@ import { Feather } from "@expo/vector-icons";
 import { TextInput } from "react-native-gesture-handler";
 import { color } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
-const SearchBar = ({ term, onTermChange , onTermSubmit}) => {
+const SearchBar = ({ term, onTermChange, onTermSubmit }) => {
   return (
     <View style={styles.backgroundStyle}>
       <Feather name="search" style={styles.iconStyle} />
@@ -29,8 +29,7 @@ const styles = StyleSheet.create({
     borderRadius: 10, // köşe yumuşatma
     margin: 10, // kenarlardan boşluk
     flexDirection: "row", //satır haline getirme
-    marginBottom:10,
-    
+    marginBottom: 10,
   },
   inputStyle: {
     flex: 1, // yayma
